@@ -3,59 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your IT Services</title>
+    <title>IT Services | Your Company</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background-color: #0073e6;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        /* Carousel Styling */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 300%;
+            animation: slide 15s infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Services Section */
+        .services {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .service-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .service-description {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .service-description h3 {
+            font-size: 2em;
+            color: #0073e6;
+            margin-bottom: 20px;
+        }
+
+        .service-description p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Your IT Services Company</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Welcome to Your IT Services</h1>
+            <p>Delivering Tailored IT Solutions for Businesses of All Sizes</p>
+        </div>
     </header>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to CloudBridge-Systems</h2>
-            <p>
-Transforming Your Business with Innovative IT Solutions
+    <!-- Image Carousel Section -->
+    <section class="carousel">
+        <div class="carousel-inner">
+            <img src="images/it-service1.jpg" alt="IT Service 1">
+            <img src="images/it-service2.jpg" alt="IT Service 2">
+            <img src="images/it-service3.jpg" alt="IT Service 3">
+        </div>
+    </section>
 
-At CloudBridge-Systems, we specialize in delivering tailored IT solutions that empower businesses to thrive in today’s fast-paced digital landscape. Whether you're a startup looking to scale or an established enterprise seeking to streamline operations, our expert team provides end-to-end IT services to meet your unique needs.
+    <!-- Services Section -->
+    <section class="container services">
+        <h2>Our Services</h2>
 
-</p>
-        </section>
-    </main>
-    <h3>
-Our Services
-Cloud Solutions
-Enhance flexibility and reduce costs with our robust cloud infrastructure and services designed to support your business's growth.
+        <div class="service">
+            <img src="images/cloud-solutions.jpg" alt="Cloud Solutions" class="service-img">
+            <div class="service-description">
+                <h3>Cloud Solutions</h3>
+                <p>Our cloud solutions provide the flexibility, scalability, and security your business needs to grow. We offer a range of cloud services that help you migrate, manage, and optimize your cloud infrastructure with ease.</p>
+            </div>
+        </div>
 
-Cybersecurity
-Protect your data and systems with cutting-edge security solutions that safeguard your business from ever-evolving threats.
+        <div class="service">
+            <img src="images/cybersecurity.jpg" alt="Cybersecurity" class="service-img">
+            <div class="service-description">
+                <h3>Cybersecurity</h3>
+                <p>Safeguard your business with our advanced cybersecurity solutions. From threat detection and prevention to comprehensive risk management, we ensure your data and systems remain protected from cyber threats.</p>
+            </div>
+        </div>
 
-Managed IT Services
-Let us handle your IT operations so you can focus on driving your business forward. From 24/7 support to proactive monitoring, we’ve got you covered.
+        <div class="service">
+            <img src="images/managed-it.jpg" alt="Managed IT Services" class="service-img">
+            <div class="service-description">
+                <h3>Managed IT Services</h3>
+                <p>Focus on growing your business while we handle all your IT needs. Our managed IT services provide 24/7 monitoring, support, and proactive management of your IT infrastructure to keep your business running smoothly.</p>
+            </div>
+        </div>
 
-Software Development
-Build custom software and applications that improve efficiency, productivity, and customer experience, with our agile development process.
+        <div class="service">
+            <img src="images/software-development.jpg" alt="Software Development" class="service-img">
+            <div class="service-description">
+                <h3>Software Development</h3>
+                <p>From custom software solutions to mobile app development, we build high-quality software tailored to your business needs. Our expert developers work closely with you to create solutions that enhance your efficiency and customer satisfaction.</p>
+            </div>
+        </div>
+    </section>
 
-IT Consulting
-Maximize your technology investments with expert advice and strategy, tailored to your business objectives.
-
-Why Choose Us?
-Expert Team: Our skilled professionals bring years of industry experience to every project.
-Proven Track Record: Trusted by businesses across various sectors, we’ve helped them achieve digital transformation and business success.
-Innovative Solutions: We stay ahead of industry trends to provide you with the most advanced technology solutions.
-Customer-Centric Approach: Your success is our priority. We partner with you to understand your goals and deliver results that exceed expectations.
-Get Started Today!
-Take the first step toward optimizing your IT infrastructure and driving business success. Contact us for a free consultation!</h3>
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Your IT Services Company</p>
+        <div class="container">
+            <p>&copy; 2024 Your Company | All Rights Reserved</p>
+        </div>
     </footer>
+
 </body>
 </html>
