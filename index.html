@@ -3,114 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Services | Your Company</title>
+    <title>Your IT Services</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
         }
 
         header {
-            text-align: center;
             background-color: #0073e6;
+            padding: 20px;
+            text-align: center;
             color: white;
-            padding: 50px 20px;
         }
 
         header h1 {
-            font-size: 3em;
+            margin: 0;
         }
 
-        /* Carousel Styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Carousel Styles */
         .carousel {
-            display: flex;
-            overflow: hidden;
             position: relative;
             max-width: 100%;
-            height: 400px;
-            margin-top: 20px;
+            margin: 20px auto;
+            overflow: hidden;
             border-radius: 10px;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .carousel-inner {
             display: flex;
-            width: 300%;
-            animation: slide 15s infinite;
+            transition: transform 0.5s ease;
+            width: 300%; /* 3 slides */
         }
 
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            33% { transform: translateX(-100%); }
-            66% { transform: translateX(-200%); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Services Section */
-        .services {
-            margin-top: 50px;
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: white;
             text-align: center;
         }
 
-        .services h2 {
+        .carousel-slide h2 {
+            margin-bottom: 20px;
             font-size: 2.5em;
-            margin-bottom: 40px;
-        }
-
-        .service {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-            text-align: left;
-        }
-
-        .service-img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-        }
-
-        .service-description {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .service-description h3 {
-            font-size: 2em;
             color: #0073e6;
-            margin-bottom: 20px;
         }
 
-        .service-description p {
+        .carousel-slide p {
             font-size: 1.2em;
-            margin-bottom: 20px;
         }
 
+        /* Controls for Next and Previous */
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Footer Styles */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -118,64 +110,80 @@
 
     <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>Welcome to Your IT Services</h1>
-            <p>Delivering Tailored IT Solutions for Businesses of All Sizes</p>
-        </div>
+        <h1>Your IT Services Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Image Carousel Section -->
+    <!-- Carousel Section -->
     <section class="carousel">
-        <div class="carousel-inner">
-            <img src="images/it-service1.jpg" alt="IT Service 1">
-            <img src="images/it-service2.jpg" alt="IT Service 2">
-            <img src="images/it-service3.jpg" alt="IT Service 3">
-        </div>
-    </section>
+        <div class="carousel-inner" id="carousel-inner">
+            <!-- Slide 1: Home -->
+            <div class="carousel-slide" id="home">
+                <h2>Welcome to Our IT Services</h2>
+                <p>We provide top-notch IT solutions to help your business thrive.</p>
+            </div>
 
-    <!-- Services Section -->
-    <section class="container services">
-        <h2>Our Services</h2>
+            <!-- Slide 2: Services -->
+            <div class="carousel-slide" id="services">
+                <h2>Our Services</h2>
+                <p>We offer cloud solutions, cybersecurity, managed IT services, and more to meet your needs.</p>
+            </div>
 
-        <div class="service">
-            <img src="images/cloud-solutions.jpg" alt="Cloud Solutions" class="service-img">
-            <div class="service-description">
-                <h3>Cloud Solutions</h3>
-                <p>Our cloud solutions provide the flexibility, scalability, and security your business needs to grow. We offer a range of cloud services that help you migrate, manage, and optimize your cloud infrastructure with ease.</p>
+            <!-- Slide 3: About Us -->
+            <div class="carousel-slide" id="about">
+                <h2>About Us</h2>
+                <p>With years of experience, our dedicated team delivers reliable IT services.</p>
+            </div>
+
+            <!-- Slide 4: Contact -->
+            <div class="carousel-slide" id="contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us to learn more about how we can help your business grow.</p>
             </div>
         </div>
 
-        <div class="service">
-            <img src="images/cybersecurity.jpg" alt="Cybersecurity" class="service-img">
-            <div class="service-description">
-                <h3>Cybersecurity</h3>
-                <p>Safeguard your business with our advanced cybersecurity solutions. From threat detection and prevention to comprehensive risk management, we ensure your data and systems remain protected from cyber threats.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="images/managed-it.jpg" alt="Managed IT Services" class="service-img">
-            <div class="service-description">
-                <h3>Managed IT Services</h3>
-                <p>Focus on growing your business while we handle all your IT needs. Our managed IT services provide 24/7 monitoring, support, and proactive management of your IT infrastructure to keep your business running smoothly.</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <img src="images/software-development.jpg" alt="Software Development" class="service-img">
-            <div class="service-description">
-                <h3>Software Development</h3>
-                <p>From custom software solutions to mobile app development, we build high-quality software tailored to your business needs. Our expert developers work closely with you to create solutions that enhance your efficiency and customer satisfaction.</p>
-            </div>
-        </div>
+        <!-- Next and Previous Buttons -->
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Company | All Rights Reserved</p>
-        </div>
+        <p>&copy; 2024 Your IT Services Company</p>
     </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(slideIndex) {
+            const slides = document.querySelector('.carousel-inner');
+            const totalSlides = slides.children.length;
+            if (slideIndex >= totalSlides) {
+                currentSlide = 0;
+            } else if (slideIndex < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    </script>
 
 </body>
 </html>
+
