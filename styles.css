@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fff3e0; /* Light orange background */
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #ff9800; /* Orange */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -21,6 +22,15 @@ nav ul li {
     margin: 0 1rem;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding: 2rem;
 }
@@ -28,7 +38,7 @@ main {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #ffe082; /* Light yellow */
     position: relative;
     bottom: 0;
     width: 100%;
@@ -52,7 +62,12 @@ input, textarea {
 button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: #007BFF;
+    background-color: #ff9800; /* Orange */
     color: white;
     border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fb8c00; /* Darker orange */
 }
